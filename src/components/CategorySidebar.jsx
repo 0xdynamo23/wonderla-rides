@@ -39,9 +39,9 @@ const CategorySidebar = ({ selected, onSelect }) => (
       return (
         <div className="absolute flex gap-8 items-center"
           style={{ ...pos, transition: 'transform 280ms cubic-bezier(.32,.52,0,1), box-shadow .22s' }}
+          key={cat.name}
         >
           <button
-            key={cat.name}
             onClick={() => onSelect(cat.name)}
             className={`group focus:outline-none transition-all flex flex items-center ${selected === cat.name ? 'z-20 scale-[2]' : 'z-10 scale-150'}`}
             // style={{ ...pos, transition: 'transform 280ms cubic-bezier(.32,.52,0,1), box-shadow .22s' }}

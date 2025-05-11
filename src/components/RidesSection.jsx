@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import CategorySidebar from "./CategorySidebar";
 import CarouselControls from "./CarouselControls";
 import RideCard from "./RideCard";
 
 const CARDS_ON_SCREEN = 3;
-const CARD_WIDTH = 320; // Width of each card in pixels
+const CARD_WIDTH = 250; // Width of each card in pixels
 
 const RidesSection = ({ ridesData, onExplore }) => {
   const [category, setCategory] = useState("Land");
@@ -12,9 +12,30 @@ const RidesSection = ({ ridesData, onExplore }) => {
   const [startIdx, setStartIdx] = useState(0);
 
   const maxStart = Math.max(0, rides.length - CARDS_ON_SCREEN);
-  const handlePrev = () => setStartIdx(idx => Math.max(0, idx - 1));
-  const handleNext = () => setStartIdx(idx => Math.min(maxStart, idx + 1));
-  const showRides = rides.slice(startIdx, startIdx + CARDS_ON_SCREEN);
+  const cardContainerRef = useRef(null);
+  const handlePrev = () => {
+    if (cardContainerRef.current) {
+      const rect = cardContainerRef.current.getBoundingClientRect();
+      const x = rect.left;
+      if (x > 0) {
+        cardContainerRef.current.scrollLeft -= CARD_WIDTH + 16;
+      } else {
+        cardContainerRef.current.scrollLeft = cardContainerRef.current.scrollWidth;
+      }
+    }
+  }
+  const handleNext = () => {
+    if (cardContainerRef.current) {
+      const rect = cardContainerRef.current.getBoundingClientRect();
+      const x = rect.left;
+      if (x > 0) {
+        cardContainerRef.current.scrollLeft -= CARD_WIDTH + 16;
+      } else {
+        cardContainerRef.current.scrollLeft = cardContainerRef.current.scrollWidth;
+      }
+    }
+  };
+  // const showRides = rides.slice(startIdx, startIdx + CARDS_ON_SCREEN);
 
   return (
     <div className="grid grid-cols-[1fr_2fr] w-full relative" style={{ zIndex: 1 }}>
@@ -34,16 +55,16 @@ const RidesSection = ({ ridesData, onExplore }) => {
         </div>
 
         <div className="w-full flex items-center justify-end overflow-hidden relative h-[380px]">
-          <div className="absolute right-0 w-screen overflow-x-auto hide-scrollbar">
-            <div className="flex gap-8 items-center py-5 justify-end" style={{
-              paddingRight: '24px',
+          <div className="absolute right-0 w-screen overflow-x-auto hide-scrollbar scroll-smooth" ref={cardContainerRef}>
+            <div className="flex gap-8 items-center py-5 justify-start" style={{
+              paddingRight: '50px',
               paddingLeft: '250px',
               width: 'calc(100vw - 160px)'
             }}>
-              {showRides.length === 0 ? (
-                <div className="text-white/70 font-medium text-2xl flex items-center h-[350px] px-10">No rides in this category yet.</div>
+              {rides.length === 0 ? (
+                <div className="text-white/70 font-medium text-2xl flex items-center px-10">No rides in this category yet.</div>
               ) : (
-                showRides.map((ride, i) => (
+                rides.map((ride, i) => (
                   <RideCard key={ride.title + i} video={ride.video} {...ride} />
                 ))
               )}

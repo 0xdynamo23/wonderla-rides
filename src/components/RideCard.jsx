@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 const RideCard = ({ video, title, location, description, onDetails }) => (
   <div
-    className="group w-[320px] h-[350px] rounded-2xl overflow-hidden shadow-md bg-[#364875] relative flex flex-col justify-end cursor-pointer transition-transform duration-200 hover:-translate-y-1 hover:shadow-2xl"
+    className="group w-[250px] h-[400px] rounded-2xl overflow-hidden shadow-md bg-[#364875] relative flex flex-col justify-end cursor-pointer transition-transform duration-200 shrink-0 hover:shadow-2xl"
     style={{
       fontFamily: 'Montserrat, Poppins, sans-serif',
       borderRadius: 28,
@@ -21,7 +21,7 @@ const RideCard = ({ video, title, location, description, onDetails }) => (
     />
     {/* Overlay for darken & gradient at bottom */}
     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/7 to-transparent z-10" />
-    <div className="relative z-20 flex flex-col justify-end gap-1 p-5 pb-7 h-full">
+    <div className="relative z-20 flex flex-col justify-end gap-1 p-5">
       <div>
         <div
           className="text-white font-extrabold text-xl mb-1 leading-tight tracking-wide"
