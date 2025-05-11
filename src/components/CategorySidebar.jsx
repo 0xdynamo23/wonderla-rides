@@ -1,19 +1,18 @@
 import React from "react";
 
-// Three category positions in polar angles (degrees)
 const categories = [
-  { name: "Land", rides: 74, icon: "https://wonderla.vercel.app/icons/landRides.svg", angle: 225 }, // top
-  { name: "Water", rides: 55, icon: "https://wonderla.vercel.app/icons/waterRides.svg", angle: 180 }, // center
-  { name: "Kids", rides: 36, icon: "https://wonderla.vercel.app/icons/kidsRides.svg", angle: 135 } // bottom
+  { name: "Land", rides: 73, icon: "https://wonderla.vercel.app/icons/landRides.svg", angle: 225 }, 
+  { name: "Water", rides: 54, icon: "https://wonderla.vercel.app/icons/waterRides.svg", angle: 180 }, 
+  { name: "Kids", rides: 35, icon: "https://wonderla.vercel.app/icons/kidsRides.svg", angle: 135 } 
 ];
 const ARC_HEIGHT = 600;
 const ARC_RADIUS = 180;
 const ARC_CENTER = { x: 0, y: ARC_HEIGHT / 2 };
-const ICON_RADIUS = 250; // slightly inside arc so icons sit on stroke
+const ICON_RADIUS = 250; 
 
 function getIconXY(angleDeg) {
   const rad = (angleDeg * Math.PI) / 180;
-  const x = ARC_CENTER.x - ICON_RADIUS * Math.cos(rad) - 30; // 60/2 for icon size
+  const x = ARC_CENTER.x - ICON_RADIUS * Math.cos(rad) - 30;
   const y = ARC_CENTER.y + ICON_RADIUS * Math.sin(rad) - 30;
   return { left: `${x}px`, top: `${y}px` };
 }
@@ -44,7 +43,6 @@ const CategorySidebar = ({ selected, onSelect }) => (
           <button
             onClick={() => onSelect(cat.name)}
             className={`group focus:outline-none transition-all flex flex items-center ${selected === cat.name ? 'z-20 scale-[2]' : 'z-10 scale-150'}`}
-            // style={{ ...pos, transition: 'transform 280ms cubic-bezier(.32,.52,0,1), box-shadow .22s' }}
             aria-pressed={selected === cat.name}
           >
             <span
@@ -55,8 +53,8 @@ const CategorySidebar = ({ selected, onSelect }) => (
             </span>
           </button>
           <div className="translate-x-8 flex flex-col">
-            <span className="font-bold text-white text-[1.05rem] mt-[2px] select-none drop-shadow" style={{ fontFamily: 'Montserrat,Poppins,sans-serif' }}>{cat.name}</span>
-            <span className="text-[#7d8aff] bg-white/10 px-3 py-[1px] rounded-full text-[13.1px] font-medium min-w-[84px] text-center mt-0.5">{cat.rides} Rides</span>
+            <span className="text-white text-[1.05rem] mt-[2px] select-none drop-shadow" style={{ fontFamily: 'Montserrat,Poppins,sans-serif' }}>{cat.name}</span>
+            <span className="text-white bg-[#788BEB] px-3 py-1 rounded-full text-[13.1px] font-medium min-w-[84px] text-center mt-0.5">{cat.rides} Rides</span>
           </div>
         </div>
       );

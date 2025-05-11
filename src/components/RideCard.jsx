@@ -20,28 +20,29 @@ const RideCard = ({ video, title, location, description, onDetails }) => (
       playsInline
     />
     {/* Overlay for darken & gradient at bottom */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/7 to-transparent z-10" />
-    <div className="relative z-20 flex flex-col justify-end gap-1 p-5">
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
+    <div className="relative z-20 flex flex-col justify-end gap-1 p-4 mt-auto pb-3">
       <div>
         <div
-          className="text-white font-extrabold text-xl mb-1 leading-tight tracking-wide"
+          className="text-white font-bold text-lg mb-0.5 leading-tight tracking-wide"
           style={{
-            fontSize: '1.36rem',
+            fontSize: '1.1rem',
             letterSpacing: '0.01em'
           }}
         >
           {title}
         </div>
         <div
-          className="text-[#ffe352] text-xs font-semibold mb-1.5 uppercase tracking-wider"
+          className="text-gray-300 text-xs font-normal mb-1 tracking-wide"
           style={{
-            fontSize: '0.82rem'
+            fontSize: '0.75rem',
+            whiteSpace: 'nowrap'
           }}
         >
           {location}
         </div>
         <div
-          className="text-white/90 text-[15px] mb-4 min-h-[2.7em] font-medium leading-snug"
+          className="text-white/90 text-xs mb-2 min-h-[2.2em] font-medium leading-snug line-clamp-2"
           style={{
             fontFamily: 'Montserrat, Poppins, sans-serif'
           }}
@@ -51,7 +52,7 @@ const RideCard = ({ video, title, location, description, onDetails }) => (
       </div>
       <button
         onClick={onDetails}
-        className="bg-[#ffe352] text-[#252f4b] font-bold px-6 py-1.5 rounded-md mt-auto w-fit shadow hover:bg-[#ffd700] focus:bg-[#ffd500] active:scale-95 transition text-sm"
+        className="bg-[#FAD504] text-[#334DCF] font-semibold px-4 py-1.5 rounded-md mt-auto w-fit shadow hover:bg-[#ffd700] focus:bg-[#ffd500] active:scale-95 transition text-xs"
         style={{ fontFamily: 'inherit' }}
       >
         RIDE DETAILS
