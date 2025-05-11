@@ -1,0 +1,107 @@
+[
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Sky_Ring_480p_1749236cd3.mp4",
+    "title": "Sky Ring",
+    "location": "Kochi",
+    "description": "Shoot up a sky-high tower for a birds-eye view of Wonderla Kochi! The Sky Ring is a vertical tower ride that gives you a breathtaking panoramic view before a thrilling drop.",
+    "category": "Land"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/MI_3s_V_5_MB_8572eacf1a.mp4",
+    "title": "Mission Interstellar",
+    "location": "Bengaluru",
+    "description": "Blast through cosmic chaos on a wild, out-of-this-world space ride! Mission Interstellar is a next-gen space-themed flying theater experience with immersive visuals and motion.",
+    "category": "Land"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/G_Fall_480p_54a0131d48.mp4",
+    "title": "Giant Wheel",
+    "location": "Hyderabad",
+    "description": "Enjoy a panoramic view of the entire park from the top of the Giant Wheel, one of the tallest in India. A must-try for families and thrill-seekers alike.",
+    "category": "Land"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Equinox_480p_bafc65400f.mp4",
+    "title": "Wonderla Bamba",
+    "location": "Bhubaneswar",
+    "description": "Perfect for first time thrill-seekers: a spin with sudden drops and bursts of speed! Wonderla Bamba is a family-friendly ride with fun twists and turns.",
+    "category": "Kids"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Space_Gun_480p_a91b755b34.mp4",
+    "title": "Space Gun",
+    "location": "Kochi",
+    "description": "See the world upside-down, dangling from high up above the ground! Space Gun is a high-adrenaline ride that swings and flips you 360 degrees.",
+    "category": "Land"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Recoil_480p_dd3c781929.mp4",
+    "title": "Recoil",
+    "location": "Bengaluru",
+    "description": "India's first-ever action-packed reverse looping roller coaster ride! Experience the thrill of being launched both forwards and backwards at high speed.",
+    "category": "Land"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Hyperverse_480p_c539001b46.mp4",
+    "title": "Hyperdeck",
+    "location": "Hyderabad",
+    "description": "Get transported to another world as you soar through a breathtaking 3D metaverse! Hyperdeck is a VR-based immersive gaming and ride experience.",
+    "category": "Land"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Spinning_Coaster_8bde2ae30d.mp4",
+    "title": "Equinox",
+    "location": "Bhubaneswar",
+    "description": "A thrill monster that flips you around 360 degrees in a gravity-defying spin. Equinox is a pendulum ride that swings and rotates for maximum excitement.",
+    "category": "Land"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Air_Race_480p_5d9fb9b2f6.mp4",
+    "title": "Air Race",
+    "location": "Kochi",
+    "description": "An exhilarating flight simulation with banks, loops and dives. Air Race lets you experience the thrill of aerobatic flying in a safe, fun way.",
+    "category": "Kids"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Y_Scream_480p_0a746cad75.mp4",
+    "title": "Y-Scream",
+    "location": "Bengaluru",
+    "description": "Strap in tight to swing, spin and scream on this dizzying 360-degree thrill fest! Y-Scream is a high-speed pendulum ride that will leave you breathless.",
+    "category": "Land"
+  },
+  {
+    "video": "https://www.wonderla.com/uploads/kochi-rides/wave-pool.webp",
+    "title": "Wave Pool",
+    "location": "Kochi",
+    "description": "Experience the bliss of waves washing over you, far away from the sea. The Wave Pool simulates ocean waves for a fun and relaxing time.",
+    "category": "Water"
+  },
+  {
+    "video": "https://www.wonderla.com/uploads/bangalore-rides/drop-loop.mp4",
+    "title": "Drop Loop",
+    "location": "Bengaluru",
+    "description": "Slide down a sky-high slope, twist through a loop and make a splashy exit! Drop Loop is a high-thrill water slide with a vertical drop and a full loop.",
+    "category": "Water"
+  },
+  {
+    "video": "https://www.wonderla.com/uploads/hyderabad-rides/rain-disco.webp",
+    "title": "Rain Disco",
+    "location": "Hyderabad",
+    "description": "Get soaked, splashed and sprayed in this thrilling pool paradise! Rain Disco is a rain dance floor with music and lights for endless fun.",
+    "category": "Water"
+  },
+  {
+    "video": "https://www.wonderla.com/uploads/bhubaneswar-rides/fun-rapids.webp",
+    "title": "Fun Rapids",
+    "location": "Bhubaneswar",
+    "description": "Rush down, take a breather, and slide back down to the finish for pure, non-stop thrill! Fun Rapids is a multi-lane water slide for racing your friends.",
+    "category": "Water"
+  },
+  {
+    "video": "https://www.wonderla.com/uploads/kochi-rides/magic-carousel.webp",
+    "title": "Magic Carousel",
+    "location": "Kochi",
+    "description": "Classic fun for all ages, the magic carousel spins you in a whirl of colors! Enjoy a gentle ride on beautifully crafted horses and carriages.",
+    "category": "Kids"
+  }
+]
