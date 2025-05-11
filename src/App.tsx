@@ -94,7 +94,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-[#252f4b] flex flex-col font-sans">
+    <div className="min-h-screen w-full bg-[#252f4b] flex flex-col font-sans ">
       <Header />
       <RidesSection ridesData={ridesData} onExplore={() => {}} />
     </div>

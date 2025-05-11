@@ -75,7 +75,7 @@ const RidesSection = ({ ridesData, onExplore }) => {
         <div className="max-w-6xl mx-auto w-full">
           <div className="w-full flex justify-start mt-10 pb-2 pl-[calc(160px+24px+8px)]">
             <button
-              className="bg-[#ffe352] hover:bg-[#ffd500] transition-colors duration-200 px-28 py-3 rounded-full font-semibold text-[#252f4b] text-lg shadow-md"
+              className="bg-[#ffe352] hover:bg-[#ffd500] transition-colors duration-200 px-28 py-3 rounded-full font-semibold text-[#334dcf] text-lg shadow-md ml-[-160px] pt-5 items-centre align-middle"
               onClick={() => onExplore && onExplore()}
             >
               Explore All Rides!

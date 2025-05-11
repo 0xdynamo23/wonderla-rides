@@ -2,12 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 const RideCard = ({ video, title, location, description, onDetails }) => (
   <div
-    className="group w-[250px] h-[400px] rounded-2xl overflow-hidden shadow-md bg-[#364875] relative flex flex-col justify-end cursor-pointer transition-transform duration-200 shrink-0 hover:shadow-2xl"
-    style={{
-      fontFamily: 'Montserrat, Poppins, sans-serif',
-      borderRadius: 28,
-      boxShadow: '0 8px 32px rgba(31,40,63,0.13)'
-    }}
+    className="group w-[250px] h-[400px] overflow-hidden shadow-md bg-[#364875] relative flex flex-col justify-end cursor-pointer transition-transform duration-200 shrink-0 hover:shadow-2xl rounded-[40px]"
   >
     {/* Ride Video */}
     <video
