@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 
 const RideCard = ({ video, title, location, description, onDetails }) => (
   <div
@@ -16,7 +16,7 @@ const RideCard = ({ video, title, location, description, onDetails }) => (
     />
     {/* Overlay for darken & gradient at bottom */}
     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
-    <div className="relative z-20 flex flex-col justify-end gap-1 p-4 mt-auto pb-3">
+    <div className="relative z-20 flex flex-col justify-end gap-1 p-4 mt-auto pb-5">
       <div>
         <div
           className="text-white font-bold text-lg mb-0.5 leading-tight tracking-wide"
@@ -37,7 +37,7 @@ const RideCard = ({ video, title, location, description, onDetails }) => (
           {location}
         </div>
         <div
-          className="text-white/90 text-xs mb-2 min-h-[2.2em] font-medium leading-snug line-clamp-2"
+          className="text-white/90 text-xs mb-3 min-h-[2.2em] font-medium leading-snug line-clamp-2"
           style={{
             fontFamily: 'Montserrat, Poppins, sans-serif'
           }}
@@ -47,7 +47,7 @@ const RideCard = ({ video, title, location, description, onDetails }) => (
       </div>
       <button
         onClick={onDetails}
-        className="bg-[#FAD504] text-[#334DCF] font-semibold px-4 py-1.5 rounded-md mt-auto w-fit shadow hover:bg-[#ffd700] focus:bg-[#ffd500] active:scale-95 transition text-xs"
+        className="bg-[#FAD504] text-[#334DCF] font-semibold px-4 py-1.5 rounded-md mt-1 w-fit shadow hover:bg-[#ffd700] focus:bg-[#ffd500] active:scale-95 transition text-xs uppercase"
         style={{ fontFamily: 'inherit' }}
       >
         RIDE DETAILS

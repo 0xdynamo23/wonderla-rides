@@ -70,21 +70,21 @@
     "category": "Land"
   },
   {
-    "video": "https://www.wonderla.com/uploads/kochi-rides/wave-pool.webp",
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Waterfall_480p_986c910678.mp4",
     "title": "Wave Pool",
     "location": "Kochi",
     "description": "Experience the bliss of waves washing over you, far away from the sea. The Wave Pool simulates ocean waves for a fun and relaxing time.",
     "category": "Water"
   },
   {
-    "video": "https://www.wonderla.com/uploads/bangalore-rides/drop-loop.mp4",
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Drop_Loop_480p_604a9571a6.mp4",
     "title": "Drop Loop",
     "location": "Bengaluru",
     "description": "Slide down a sky-high slope, twist through a loop and make a splashy exit! Drop Loop is a high-thrill water slide with a vertical drop and a full loop.",
     "category": "Water"
   },
   {
-    "video": "https://www.wonderla.com/uploads/hyderabad-rides/rain-disco.webp",
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Skrew_480p_e740d8313b.mp4",
     "title": "Rain Disco",
     "location": "Hyderabad",
     "description": "Get soaked, splashed and sprayed in this thrilling pool paradise! Rain Disco is a rain dance floor with music and lights for endless fun.",
@@ -98,10 +98,17 @@
     "category": "Water"
   },
   {
-    "video": "https://www.wonderla.com/uploads/kochi-rides/magic-carousel.webp",
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Drop_480p_592faaf01c.mp4",
     "title": "Magic Carousel",
     "location": "Kochi",
     "description": "Classic fun for all ages, the magic carousel spins you in a whirl of colors! Enjoy a gentle ride on beautifully crafted horses and carriages.",
     "category": "Kids"
+  },
+  {
+    "video": "https://d22pimhl2qmbj7.cloudfront.net/public/Drop_480p_592faaf01c.mp4",
+    "title": "Water Pendulum",
+    "location": "Kochi",
+    "description": "Classic fun for all ages, the magic carousel spins you in a whirl of colors! Enjoy a gentle ride on beautifully crafted horses and carriages.",
+    "category": "Water"
   }
 ]
