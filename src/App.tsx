@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-
-// Import components with type declarations
-// @ts-ignore - Ignore missing type declarations for imported components
+// @ts-ignore 
 import CategorySidebar from './components/CategorySidebar';
 // @ts-ignore
 import CarouselControls from './components/CarouselControls';
@@ -71,7 +69,6 @@ const Header = () => {
                 )}
               </span>
               
-              {/* Locations Dropdown */}
               {item.label === "LOCATIONS" && locationsOpen && (
                 <div className="absolute left-0 top-full mt-8 z-50 bg-white  text-black rounded-xl shadow-xl p-4 w-[300px]">
                   <div className="flex flex-col">
@@ -467,10 +464,9 @@ const Header = () => {
 
 // Constants for the RidesSection component
 const CARDS_ON_SCREEN = 3;
-const CARD_WIDTH = 250; // Width of each card in pixels
-const CARD_GAP = 32; // Gap between cards
+const CARD_WIDTH = 250; 
+const CARD_GAP = 32; 
 
-// RidesSection component moved from separate file
 interface RideData {
   video: string;
   title: string;
@@ -498,13 +494,11 @@ const RidesSection = ({ ridesData, onExplore }: RidesSectionProps) => {
   const startAutoScroll = () => {
     if (isScrolling || rides.length <= 1) return;
     
-    // Clear any existing timer
     if (autoScrollTimerRef.current) {
       clearTimeout(autoScrollTimerRef.current);
       autoScrollTimerRef.current = null;
     }
     
-    // Set up the next auto-scroll
     autoScrollTimerRef.current = setTimeout(() => {
       handleNext();
     }, 4000);
@@ -512,22 +506,19 @@ const RidesSection = ({ ridesData, onExplore }: RidesSectionProps) => {
   
   // Reset scroll position and index when category changes
   useEffect(() => {
-    // Clear any existing auto-scroll timer
     if (autoScrollTimerRef.current) {
       clearTimeout(autoScrollTimerRef.current);
       autoScrollTimerRef.current = null;
     }
     
     // Reset position and state
-    setCurrentIndex(0);
+    setCurrentIndex(1); 
     setIsScrolling(false);
     
-    // Reset scroll position
     if (cardContainerRef.current) {
-      cardContainerRef.current.scrollLeft = 0;
+      cardContainerRef.current.scrollLeft = CARD_WIDTH + CARD_GAP;
     }
     
-    // Delay starting auto-scroll to ensure DOM is ready
     const initialDelay = setTimeout(() => {
       startAutoScroll();
     }, 1000);
@@ -541,11 +532,9 @@ const RidesSection = ({ ridesData, onExplore }: RidesSectionProps) => {
     };
   }, [category, rides.length]);
 
-  // Function to handle previous button click
   const handlePrev = () => {
     if (isScrolling || rides.length <= 1) return;
     
-    // Clear auto-scroll timer
     if (autoScrollTimerRef.current) {
       clearTimeout(autoScrollTimerRef.current);
       autoScrollTimerRef.current = null;
@@ -553,42 +542,34 @@ const RidesSection = ({ ridesData, onExplore }: RidesSectionProps) => {
     
     setIsScrolling(true);
     
-    // Calculate new index with wraparound
     const newIndex = currentIndex === 0 ? rides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
     
-    // Handle scroll animation
     if (cardContainerRef.current) {
       if (currentIndex === 0) {
-        // Jump to end without animation if at beginning
         const maxScroll = (rides.length - 1) * (CARD_WIDTH + CARD_GAP);
         cardContainerRef.current.scrollLeft = maxScroll;
         setIsScrolling(false);
       } else {
-        // Smooth scroll to previous card
         cardContainerRef.current.scrollTo({
           left: (newIndex) * (CARD_WIDTH + CARD_GAP),
           behavior: 'smooth'
         });
         
-        // Reset scrolling state after animation completes
         setTimeout(() => {
           setIsScrolling(false);
         }, 700);
       }
     }
     
-    // Restart auto-scroll after a delay
     const restartTimer = setTimeout(() => {
       startAutoScroll();
     }, 800);
   };
 
-  // Function to handle next button click
   const handleNext = () => {
     if (isScrolling || rides.length <= 1) return;
     
-    // Clear auto-scroll timer
     if (autoScrollTimerRef.current) {
       clearTimeout(autoScrollTimerRef.current);
       autoScrollTimerRef.current = null;
@@ -603,26 +584,21 @@ const RidesSection = ({ ridesData, onExplore }: RidesSectionProps) => {
     // Handle scroll animation
     if (cardContainerRef.current) {
       if (newIndex === 0) {
-        // Fast reset to beginning
         cardContainerRef.current.scrollLeft = 0;
         setIsScrolling(false);
         
-        // Restart auto-scroll after reset
         setTimeout(() => {
           startAutoScroll();
         }, 800);
       } else {
-        // Smooth scroll to next card
         cardContainerRef.current.scrollTo({
           left: newIndex * (CARD_WIDTH + CARD_GAP),
           behavior: 'smooth'
         });
         
-        // Reset scrolling state after animation completes
         setTimeout(() => {
           setIsScrolling(false);
           
-          // Restart auto-scroll after animation completes
           setTimeout(() => {
             startAutoScroll();
           }, 800);
@@ -656,11 +632,11 @@ const RidesSection = ({ ridesData, onExplore }: RidesSectionProps) => {
               <div 
                 className="flex gap-8 items-center py-5"
                 style={{ 
-                  paddingLeft: '160px', // Reduced padding to eliminate initial gap
+                  paddingLeft: '0px', 
                   paddingRight: '50px',
-                  width: `${Math.max(3, rides.length) * (CARD_WIDTH + CARD_GAP) + 100}px` // Ensure enough width for all cards with minimum of 3
+                  width: `${Math.max(3, rides.length) * (CARD_WIDTH + CARD_GAP) + 100}px` 
                 }}
-                key={`carousel-${category}`} // Force re-render when category changes
+                key={`carousel-${category}`} 
               >
                 {rides.map((ride, i) => (
                   <div key={`${category}-${ride.title}-${i}`} className="flex-shrink-0">
@@ -691,7 +667,6 @@ const RidesSection = ({ ridesData, onExplore }: RidesSectionProps) => {
 };
 
 const fetchRidesData = async () => {
-  // Dynamic import to load JSON without breaking Vite
   const rides = await import('./data/rides.json');
   return rides.default || rides;
 };
